@@ -9,23 +9,23 @@
             margin: 0;
             padding: 20px;
         }
-    
+
         h1 {
             text-align: center;
             margin-bottom: 20px;
         }
-    
+
         .container {
             max-width: 400px;
             margin: 0 auto;
         }
-    
+
         label {
             display: block;
             margin-bottom: 10px;
             margin-top: 10px;
         }
-    
+
         input[type="number"],
         select {
             width: 100%;
@@ -34,7 +34,7 @@
             border-radius: 4px;
             border: 1px solid #ccc;
         }
-    
+
         button {
             width: 100%;
             padding: 15px;
@@ -46,20 +46,20 @@
             cursor: pointer;
             margin-top: 10px;
         }
-    
+
         #result {
             margin-top: 20px;
             padding: 10px;
             border-radius: 4px;
             background-color: #f2f2f2;
         }
-    
+
         .column {
             display: flex;
             justify-content: space-between;
             margin-bottom: 10px;
         }
-    
+
         @media only screen and (max-width: 400px) {
             .container {
                 position: fixed;
@@ -71,7 +71,7 @@
                 padding: 20px;
                 box-sizing: border-box;
             }
-    
+
             input[type="number"],
             select,
             button {
@@ -80,10 +80,10 @@
             }
         }
     </style>
-
 </head>
 
 <body>
+    <p style="text-align: center;">Developed and maintained by <b>Pradumna Saraf</b></p>
     <div class="container">
         <h1>Vehicle Mileage Calculator</h1>
         <label for="distance">Distance (in km):</label>
@@ -113,58 +113,59 @@
             var vehicle = document.getElementById("vehicle").value;
 
             if (isNaN(distance) || isNaN(totalAmount) || isNaN(todayPrice)) {
-                        document.getElementById("result").innerHTML = "<h2>Please enter valid numbers for distance, total amount, and today's price.</h2>";
-                        return;
-                    }
+                document.getElementById("result").innerHTML = "<h2>Please enter valid numbers for distance, total amount, and today's price.</h2>";
+                return;
+            }
 
-                    var liters = totalAmount / todayPrice;
-                    var fuelConsumption = distance / liters;
+            var liters = totalAmount / todayPrice;
+            var fuelConsumption = distance / liters;
 
-                    var expectedMileage;
-                    switch (vehicle) {
-                        case "car0":
-                            expectedMileage = 8;
-                            break;
-                        case "car1":
-                            expectedMileage = 4;
-                            break;
-                        case "car2":
-                            expectedMileage = 5.5;
-                            break;
-                        case "car3":
-                            expectedMileage = 4;
-                            break;
-                        case "car4":
-                            expectedMileage = 4;
-                            break;
-                        case "car5":
-                            expectedMileage = 7;
-                            break;
-                        default:
-                            expectedMileage = 0;
-                    }
+            var expectedMileage;
+            switch (vehicle) {
+                case "car0":
+                    expectedMileage = 8;
+                    break;
+                case "car1":
+                    expectedMileage = 4;
+                    break;
+                case "car2":
+                    expectedMileage = 5.5;
+                    break;
+                case "car3":
+                    expectedMileage = 4;
+                    break;
+                case "car4":
+                    expectedMileage = 4;
+                    break;
+                case "car5":
+                    expectedMileage = 7;
+                    break;
+                default:
+                    expectedMileage = 0;
+            }
 
-                    var mileageDifference = fuelConsumption - expectedMileage;
+            var mileageDifference = fuelConsumption - expectedMileage;
 
-                    var resultMessage = "";
-                    if (mileageDifference === 0) {
-                        resultMessage = `<h2>The calculated mileage is the same as the expected mileage.</h2>`;
-                    } else if (mileageDifference > 0) {
-                        resultMessage = `<h2>The calculated mileage is greater than the expected mileage.</h2>`;
-                    } else {
-                        resultMessage = `<h2>The calculated mileage is less than the expected mileage.</h2>`;
-                    }
-                    resultMessage += `<p>Total Liters: ${liters.toFixed(2)}</p>`;
-                    resultMessage += `<p>Expected Mileage: ${expectedMileage} km/liter <p>`
-                    resultMessage += `<p>Calculated Mileage: ${fuelConsumption.toFixed(2)} km/liter</p>`;
+            var resultMessage = "";
+            if (mileageDifference === 0) {
+                resultMessage = `<h2>The calculated mileage is the same as the expected mileage.</h2>`;
+            } else if (mileageDifference > 0) {
+                resultMessage = `<h2>The calculated mileage is greater than the expected mileage.</h2>`;
+            } else {
+                resultMessage = `<h2>The calculated mileage is less than the expected mileage.</h2>`;
+            }
+            resultMessage += `<p>Total Liters: ${liters.toFixed(2)}</p>`;
+            resultMessage += `<p>Expected Mileage: ${expectedMileage} km/liter <p>`
+            resultMessage += `<p>Calculated Mileage: ${fuelConsumption.toFixed(2)} km/liter</p>`;
 
-                    if (mileageDifference < 0){
-                        resultMessage += `<p>Mileage difference: ${Math.abs(mileageDifference).toFixed(2)} km/liter.</p>`;
-                    }
+            if (mileageDifference < 0) {
+                resultMessage += `<p>Mileage difference: ${Math.abs(mileageDifference).toFixed(2)} km/liter.</p>`;
+            }
 
-                    document.getElementById("result").innerHTML = resultMessage;
-                }
-            </script>
-    </body>
-    
-    </html>
+            document.getElementById("result").innerHTML = resultMessage;
+        }
+
+    </script>
+</body>
+
+</html>
