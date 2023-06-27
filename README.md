@@ -1,1 +1,1 @@
-# milage-calculator
+# Mileage Calculator
