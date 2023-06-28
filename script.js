@@ -16,21 +16,24 @@ function calculateMileage() {
   var expectedMileage;
   switch (vehicle) {
     case "truck1":
-      expectedMileage = 8;
+      expectedMileage = 7;
       break;
     case "truck2":
-      expectedMileage = 4;
+      expectedMileage = 3.5;
       break;
     case "truck3":
       expectedMileage = 5.5;
       break;
     case "truck4":
-      expectedMileage = 4;
+      expectedMileage = 6;
       break;
     case "truck5":
       expectedMileage = 4;
       break;
     case "truck6":
+      expectedMileage = 4;
+      break;
+    case "truck7":
       expectedMileage = 7;
       break;
     default:
