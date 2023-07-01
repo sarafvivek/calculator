@@ -78,3 +78,25 @@ button {
         font-size: 50px;
     }
 }
+
+/* Style the Select2 dropdown */
+.select2-container {
+    width: 100% !important;
+}
+
+.select2-selection {
+    height: 40px !important;
+    font-size: 16px !important;
+    border-radius: 4px !important;
+    border: 1px solid #ccc !important;
+}
+
+.select2-selection__arrow {
+    height: 40px !important;
+}
+
+/* Style the Select2 search box */
+.select2-search__field {
+    height: 40px !important;
+    font-size: 16px !important;
+}

@@ -1,5 +1,9 @@
 var expectedMileage = 0;
 
+$(document).ready(function () {
+  $(".js-example-basic-single").select2();
+});
+
 function calculateMileage() {
   var distance = parseFloat(document.getElementById("distance").value);
   var totalAmount = parseFloat(document.getElementById("totalAmount").value);
@@ -7,7 +11,7 @@ function calculateMileage() {
   var vehicle = document.getElementById("vehicle").value;
 
   if (isNaN(distance) || isNaN(totalAmount) || isNaN(todayPrice)) {
-    document.getElementById("result").innerHTML =
+    document.getElementById("rHead").innerHTML =
       "<h2>Please enter valid numbers for distance, total amount, and today's price.</h2>";
     return;
   }
@@ -22,13 +26,13 @@ function calculateMileage() {
   var resultHead = "";
   var resultMessage = "";
   if (mileageDifference === 0) {
-    resultHead = `The calculated mileage is equal to the expected mileage.`;
+    resultHead = `The calculated mileage of ${vehicle} is equal to the expected mileage.`;
     document.getElementById("rHead").style.color = "green";
   } else if (mileageDifference > 0) {
-    resultHead = `The calculated mileage is greater than the expected mileage.`;
+    resultHead = `The calculated mileage of ${vehicle} is greater than the expected mileage.`;
     document.getElementById("rHead").style.color = "green";
   } else {
-    resultHead = `The calculated mileage is less than the expected mileage.`;
+    resultHead = `The calculated mileage of ${vehicle} is less than the expected mileage.`;
     document.getElementById("rHead").style.color = "red";
   }
   resultMessage += `<p><b>Total Liters Consumed:</b> ${liters.toFixed(2)}</p>`;

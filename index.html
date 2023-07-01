@@ -4,6 +4,14 @@
 <head>
     <title>Vehicle Mileage Calculator</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
+    <!-- Include Select2 CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" rel="stylesheet" />
+    
+    <!-- Include jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+    <!-- Include Select2 JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
 </head>
 
 <body>
@@ -16,8 +24,8 @@
         <input type="number" id="totalAmount" required />
         <label for="todayPrice">Today's Fuel Price Per Liter (in Rupees):</label>
         <input type="number" id="todayPrice" step="0.01" required />
-        <label for="vehicle">Type of Vehicle:</label>
-        <select id="vehicle">
+        <label for="vehicle">Select Vehicle Number:</label>
+        <select id="vehicle" class="js-example-basic-single">
             <option value="BRO1GA9117">BRO1GA9117 (6 Wheel - 5.5 Kmpl)</option>
             <option value="BRO1GA9217">BRO1GA9217 (6 Wheel - 5.5 Kmpl)</option>
             <option value="BR01GA9517">BR01GA9517 (6 Wheel - 5.5 Kmpl)</option>
