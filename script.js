@@ -24,16 +24,18 @@ function calculateMileage() {
 
   var mileageDifference = fuelConsumption - expectedMileage;
 
+  var vehicleMesage = `<span style="color: black;"><b>${vehicle}</span>`;
+
   var resultHead = "";
   var resultMessage = "";
   if (mileageDifference === 0) {
-    resultHead = `The calculated mileage of ${vehicle} is equal to the expected mileage.`;
+    resultHead = `The calculated mileage of ${vehicleMesage} is equal to the expected mileage.`;
     document.getElementById("rHead").style.color = "green";
   } else if (mileageDifference > 0) {
-    resultHead = `The calculated mileage of ${vehicle} is greater than the expected mileage.`;
+    resultHead = `The calculated mileage of ${vehicleMesage} is greater than the expected mileage.`;
     document.getElementById("rHead").style.color = "green";
   } else {
-    resultHead = `The calculated mileage of ${vehicle} is less than the expected mileage.`;
+    resultHead = `The calculated mileage of ${vehicleMesage} is less than the expected mileage.`;
     document.getElementById("rHead").style.color = "red";
   }
   resultMessage += `<p><b>Total Liters Consumed:</b> ${liters.toFixed(2)}</p>`;
