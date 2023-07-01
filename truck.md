@@ -108,7 +108,7 @@
 | NL01L0655 (10 Wheel - 4 Kmpl)  |                                   
 | WB25J4273 (6 Wheel - 5.5 Kmpl) |                                   
 | WB25J6229 (6 Wheel - 5.5 Kmpl) |                                   
-| BR01GL6978 CNF (6 Wheel - 7 Kmpl) |                                   
+| BR01GL6978 CNG (6 Wheel - 7 Kmpl) |                                   
 | BR01GL6979 CNG (6 Wheel - 7 Kmpl) |                                   
 | BR01GL0816 (6 Wheel - 5.5 Kmpl) |                                   
 | WB37D1259 (12 Wheel - 4 Kmpl)  |                                   
