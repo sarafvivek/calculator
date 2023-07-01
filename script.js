@@ -12,7 +12,8 @@ function calculateMileage() {
 
   if (isNaN(distance) || isNaN(totalAmount) || isNaN(todayPrice)) {
     document.getElementById("rHead").innerHTML =
-      "<h2>Please enter valid numbers for distance, total amount, and today's price.</h2>";
+      "<h2>Please enter valid Distance, Amount and Price.</h2>";
+    document.getElementById("rMessage").innerHTML = "";
     return;
   }
 
