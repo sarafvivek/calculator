@@ -1,8 +1,8 @@
 Truck Data
 
 
-| Truck Number | Mileage |
-|--------------|---------|
+| Truck Number | Tuck Wheel | Average|
+|--------------|---------|----|
 | BRO1GA9117   | 6     | 5.5     |
 | BRO1GA9217   | 6     | 5.5     |
 | BR01GA9517   | 6     | 5.5     |
