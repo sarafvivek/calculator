@@ -117,7 +117,7 @@ function checkTruck(vehicle) {
       expectedMileage = 4;
       break;
     case "WB25B1517":
-      expectedMileage = 5.5;
+      expectedMileage = 4;
       break;
     case "WB23B9771":
       expectedMileage = 3.5;
