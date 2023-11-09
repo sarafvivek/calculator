@@ -221,6 +221,18 @@ function checkTruck(vehicle) {
     case "JH02W9015":
       expectedMileage = 5.5;
       break;
+    case "NL01D9905":
+      expectedMileage = 3.5;
+      break;
+    case "NL01D9906":
+        expectedMileage = 3.5;
+      break;
+    case "BR01GM9138":
+      expectedMileage = 5.5;
+      break;
+    case "BR01GM9139":
+      expectedMileage = 5.5;
+      break;
     default:
       expectedMileage = 0;
   }
